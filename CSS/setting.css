@@ -1,0 +1,119 @@
+body {
+    background-image: url(../IMAGES/fd.jpg);
+    background-size: contain;   
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    height: 100vh;
+}
+
+#apple {
+    width: 20px;
+}
+
+#date-heure {
+    margin-left: 90%;
+    height: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#rectangle {
+    width: 80%;  /* Utilisation d'un pourcentage pour s'adapter à différents écrans */
+    max-width: 600px;  /* Largeur maximale pour ne pas dépasser un certain format */
+    height: 205px;
+    background-color: white;
+    border-radius: 8px;  /* Bords arrondis pour un look plus moderne */
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.rond {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.vert {
+    background-color: green;
+}
+
+.dark-mode {
+    background-color: #1c1c1e;
+    color: white;
+}
+
+.dark-mode-settings {
+    background: #2c2c2e;
+    color: white;
+}
+
+#wallpaper-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.wallpaper-choice {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.wallpaper-choice:hover {
+    transform: scale(1.1);
+}
+
+#settings h2 {
+    text-align: center;
+    color: #333;
+}
+
+.dark-mode .footer,
+.dark-mode #rectangle {
+    background-color: black !important;
+    color: white !important;
+}
+
+.dark-mode .separator {
+    width: auto;
+    height: 2px;
+    background-color: white;
+    margin-top: 3px;
+}
+
+

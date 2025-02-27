@@ -1,0 +1,165 @@
+body {
+    background-image: url(../IMAGES/fd.jpg);
+    background-size: contain;   
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#apple {
+    width: 20px;
+}
+
+#date-heure {
+    margin-left: 90%;
+    height: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#rectangle {
+    width: 90%;
+    max-width: 800px;  /* Limite la taille sur les grands écrans */
+    height: auto;  /* Ajuste la hauteur en fonction du contenu */
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px auto;
+    position: relative; /* Changer de absolute à relative pour mieux s'adapter */
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.rond {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.vert {
+    background-color: green;
+}
+
+iframe {
+    width: 100%;
+    height: 90vh;  /* Utilisation de vh pour adapter à l'écran */
+    border: none;
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-footer p {
+    margin: 0;
+    margin-left: 10%;
+    font-size: 12px;
+    color: #333;
+}
+
+#info {
+    margin-top: 10%;
+    margin-left: 70%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+#gg {
+    width: 35px;
+}
+
+#git {
+    width: 70px;
+}
+
+#meaux {
+    width: 100px;
+}
+
+.foot img {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.foot img:hover {
+    transform: scale(1.1);
+}
+
+/* Icônes du footer */
+.footer a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+/* Effet lorsque la fenêtre est ouverte */
+.footer a.active-icon {
+    transform: translateY(-5px);
+}
+
+/* Petite pastille sous l'icône */
+.footer a.active-icon::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 5px;  /* Taille du point */
+    height: 5px;
+    background-color: black; /* Noir au lieu de rouge */
+    border-radius: 50%; /* Rend le point rond */
+    transform: translateX(-50%);
+}

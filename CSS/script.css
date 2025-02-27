@@ -1,0 +1,182 @@
+body {
+    background-image: url(../IMAGES/fd.jpg);
+    background-size: contain;   
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    height: 100vh;
+}
+
+#date-heure {
+    margin-left: 90%; /* Garde la position actuelle mais assure-toi qu'il y a assez d'espace */
+    white-space: nowrap; /* Empêche le texte de se couper sur plusieurs lignes */
+    height: 20px; /* Ajuste la hauteur si nécessaire */
+    line-height: 20px; /* Assure que le texte est bien centré verticalement */
+    overflow: hidden; /* Si le texte est trop long, il ne déborderont pas */
+    text-align: left; /* Aligner le texte à gauche, mais il pourrait aussi être centré ou aligné à droite */
+    font-size: 14px; /* Ajuste la taille de police si nécessaire */
+}
+
+
+.mac-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #d4d4d4; /* Gris clair typique macOS */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacement max entre boutons et texte */
+    padding: 0 15px;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    border-bottom: 1px solid #aaa;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #f5f5f7;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 5px 15px;
+    overflow: visible; /* Permet à la pastille de déborder */
+}
+
+.foot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#gg {
+    width: 20px;
+}
+
+#git {
+    width: 50px;
+}
+
+#portfolio {
+    width: 45px;
+}
+
+#meaux {
+    width: 80px;
+}
+
+.foot img {
+    width: 25px; /* Taille d'icône plus petite */
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+    position: relative;
+}
+
+.foot img:hover {
+    transform: scale(1.1);
+}
+
+.foot a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.foot a.active img {
+    transform: translateY(-5px) !important; /* Monte l'image de 5px */
+    margin-top: -5px !important; /* Ajout d'un décalage supplémentaire */
+}
+
+
+.foot a.active::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dark-mode {
+    background-color: #1c1c1e;
+    color: white;
+}
+
+.dark-mode-settings {
+    background: #2c2c2e;
+    color: white;
+}
+
+.dark-mode .footer,
+.dark-mode #rectangle {
+    background-color: black !important;
+    color: white !important;
+}
+
+.dark-mode .foot a.active::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Animation de la pastille */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.foot img:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode #git {
+    width: 30px;
+}
+
+.dark-mode .separator {
+    width: auto;
+    height: 2px;
+    background-color: white;
+    margin-top: 3px;
+}
+
+@keyframes fermerFenetre {
+    0% {
+        transform: scale(1);  /* Taille normale */
+        opacity: 1;            /* Visible */
+    }
+    100% {
+        transform: scale(0.1); /* Réduit la taille */
+        opacity: 0;            /* Disparaît */
+    }
+}
+
+#rectangle.fermer {
+    animation: fermerFenetre 0.5s ease-out forwards; /* Applique l'animation */
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../IMAGES/head.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="../CSS/script.css">
+    <script src="../JS/contact.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+    <title>Contact</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <img id="apple" src="../IMAGES/apple.png" alt="Logo Apple"> 
+            <p id="date-heure"></p>
+        </nav>
+    </header>
+
+    <main id="rectangle">
+        <section class="mac-bar">
+            <section class="buttons">
+                <span class="rond rouge"></span>
+                <span class="rond orange"></span>
+                <span class="rond vert"></span>
+            </section>
+            <section class="menu-container">
+                <div class="menu-btn">☰</div>
+                <nav class="pages">
+                    <a href="./accueil.html">ACCUEIL</a>
+                    <a href="./propos.html">À PROPOS</a>
+                    <a href="./projets.html">PROJETS</a>
+                    <a href="./parcours.html">EXPÉRIENCES & FORMATIONS</a>
+                </nav>   
+            </section>
+            <p id="contact">CONTACT</p>
+        </section>
+        <hr class="separator">
+        <p>Étudiante en première année de BUT MMI (Métiers du Multimédia et de l'Internet), je suis à la recherche d'un stage. Si mon profil vous intéresse n'hésitez pas à me contacter par email ou à remplir le formulaire ci-dessous.</p>
+        <h3>Email : <a href="mailto:giletamel@gmail.com">giletamel@gmail.com</a></h3>
+        <form action="../PHP/contact.php" method="POST" class="contact-form">
+            <label for="name"><span class="required">*</span> Nom : </label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email"><span class="required">*</span> Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="company">Entreprise (optionnel) :</label>
+            <input type="text" id="company" name="company">
+
+            <label for="message"><span class="required">*</span> Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <footer class="form-footer">
+                <button type="submit">Envoyer le message</button>
+                <p><strong>Les messages écrits ici seront envoyés à ma boîte email.</strong></p>
+            </footer>
+
+            <p id="info"><span class="required">*</span> = required</p>
+        </form>
+
+        <hr class="separator">
+        <p>Intéressé par mon profil ? <br>
+        <a href="../HTML/cv.html">Voir mon CV</a>
+        <a href="../PDF/cv-AMEL_GILET.pdf" download="cv-AMEL_GILET">Téléchargez mon CV</a></p>
+        <hr class="separator">
+    </main>
+
+    <footer class="footer">
+        <section class="foot">
+            <a href="https://www.google.fr/" target="_blank"><img id="gg" src="../IMAGES/google.png" alt="Logo Google"></a>
+            <a href="../HTML/email.html"><img src="../IMAGES/email.png" alt="Logo Email"></a>
+            <a href="../HTML/meaux.html"><img id="meaux" src="../IMAGES/meaux.png" alt="Logo Meaux-Zarrela"></a>
+            <a href="https://github.com/uno4n4"><img id="git" src="../IMAGES/github.png" alt="Logo GitHub"></a>
+            <a href="../HTML/accueil.html" id="portfolio-link"><img id="portfolio" src="../IMAGES/portfolio.png" alt="Logo Fichier Portofolio"></a>
+            <a href="../HTML/voyasia.html"><img id="icone" src="../IMAGES/icone.png" alt="Logo Voyasia"></a>
+            <a href="../HTML/setting.html"><img src="../IMAGES/setting.png" alt="Logo réglage"></a>
+        </section>
+    </footer>
+</body>
+</html>

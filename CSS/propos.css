@@ -1,0 +1,154 @@
+body {
+    background-image: url(../IMAGES/fd.jpg);
+    background-size: contain;   
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#apple {
+    width: 20px;
+}
+
+#date-heure {
+    margin-left: 90%;
+    height: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#rectangle {
+    width: 90%;  /* Utilisation d'une largeur en pourcentage pour l'adaptabilité */
+    max-width: 800px;  /* Limite la largeur maximale */
+    height: 300px;
+    background-color: white;
+    border-radius: 8px;  /* Bords plus arrondis pour un effet plus moderne */
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.rond {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.vert {
+    background-color: green;
+}
+
+#propos {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+#propos, .rond {
+    margin: 0;
+    padding: 0;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 5px;
+}
+
+#hi {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    left: 85%;
+}
+
+.menu-btn {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.pages {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.pages a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;  /* Taille de police plus lisible */
+    padding: 5px 0;
+    display: block;
+    text-align: center;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.foot a.active img {
+    transform: translateY(-5px) !important;
+    margin-top: -5px !important;
+    transition: transform 0.3s ease, margin-top 0.3s ease;
+}
+
+.foot a.active::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}

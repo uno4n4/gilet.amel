@@ -1,0 +1,197 @@
+body {
+    background-image: url(../IMAGES/fd.jpg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-size: contain;   
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #apple - Taille ajustée */
+#apple {
+    width: 20px;
+}
+
+#date-heure {
+    margin-left: 90%;
+    height: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Fenêtre principale #rectangle - Taille flexible */
+#rectangle {
+    width: 90%; /* Prend 90% de la largeur de l'écran */
+    max-width: 800px; /* Limité à 800px pour ne pas devenir trop grand */
+    height: 60vh; /* Utilise 60% de la hauteur de l'écran */
+    background-color: white;
+    border-radius: 3%;
+    margin: 50px auto;
+    position: relative;
+    padding: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    max-height: 400px; /* Ajuste la hauteur max */
+}
+
+/* Boutons de la fenêtre */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.rond {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.vert {
+    background-color: green;
+}
+
+/* Fenêtre email - Ajustements pour plus de fluidité */
+.email-window {
+    width: 90%;
+    max-width: 500px;
+    background: #f2f2f7;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 20px auto;
+}
+
+/* En-tête de la fenêtre email */
+.email-window .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d1d6;
+}
+
+.email-window .header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #007aff;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire email - Réajusté */
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Champs de saisie */
+.email-form label {
+    font-size: 14px;
+    color: #1d1d1f;
+    font-weight: 500;
+}
+
+.email-form input,
+.email-form textarea {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #d1d1d6;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    transition: border 0.2s;
+}
+
+.email-form input:focus,
+.email-form textarea:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+.email-form input[readonly] {
+    background: #e5e5ea;
+    color: #8e8e93;
+}
+
+/* Message - Amélioration de la lisibilité */
+.email-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Bouton envoyer */
+.email-form .footer1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.send-btn {
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background: #005ecb;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-footer p {
+    margin: 0;
+    margin-left: 10%;
+    font-size: 12px;
+    color: #333;
+}
+
+/* #info - Positionné à droite */
+#info {
+    margin-top: 10%;
+    margin-left: auto;
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}

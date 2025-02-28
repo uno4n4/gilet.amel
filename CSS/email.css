@@ -15,12 +15,14 @@ body {
 }
 
 #date-heure {
-    margin-left: 90%;
-    height: 10px;
     font-size: 14px;
     font-weight: 600;
+    white-space: nowrap; /* Empêche la coupure du texte */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* En haut à droite */
+    display: inline-block;
 }
-
 
 nav {
     display: flex;
@@ -41,6 +43,7 @@ nav {
     padding: 15px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     overflow-y: auto;
+    overflow-x: hidden;
     max-height: 400px; /* Ajuste la hauteur max */
 }
 
@@ -194,4 +197,44 @@ nav {
     padding: 15px;
     font-size: 14px;
     color: #333;
+}
+
+/* Media Queries pour ajustement responsive */
+@media (max-width: 768px) {
+    #rectangle {
+        width: 95%; /* Prend plus de place sur des écrans plus petits */
+        height: auto; /* Ajuste la hauteur pour les petits écrans */
+        max-height: none; /* Désactive la hauteur max */
+        overflow-x: hidden;
+    }
+
+    .email-window {
+        width: 95%; /* Augmente la largeur pour les petits écrans */
+        max-width: 400px;
+    }
+
+    .send-btn {
+        font-size: 14px; /* Réduit la taille du bouton */
+    }
+
+    #date-heure {
+        font-size: 12px; /* Réduit la taille de la date/heure */
+        top: 8px; /* Déplace un peu plus vers le haut */
+        right: 8px; /* Déplace un peu plus vers la droite */
+    }
+}
+
+@media (max-width: 480px) {
+    #rectangle {
+        overflow-x: hidden;
+    }
+
+
+    .email-form textarea {
+        height: 100px; /* Réduit la hauteur du champ de message sur les petits écrans */
+    }
+
+    .form-footer p {
+        font-size: 10px; /* Réduit la taille du texte dans le footer du formulaire */
+    }
 }

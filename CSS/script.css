@@ -11,13 +11,13 @@ body {
 }
 
 #date-heure {
-    margin-left: 90%; /* Garde la position actuelle mais assure-toi qu'il y a assez d'espace */
-    white-space: nowrap; /* Empêche le texte de se couper sur plusieurs lignes */
-    height: 20px; /* Ajuste la hauteur si nécessaire */
-    line-height: 20px; /* Assure que le texte est bien centré verticalement */
-    overflow: hidden; /* Si le texte est trop long, il ne déborderont pas */
-    text-align: left; /* Aligner le texte à gauche, mais il pourrait aussi être centré ou aligné à droite */
-    font-size: 14px; /* Ajuste la taille de police si nécessaire */
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap; /* Empêche la coupure du texte */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* En haut à droite */
+    display: inline-block;
 }
 
 

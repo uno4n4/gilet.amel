@@ -13,11 +13,21 @@ body {
     width: 20px;
 }
 
+#date-heure {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap; /* Empêche la coupure du texte */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* En haut à droite */
+    display: inline-block;
+}
+
 #rectangle {
     width: 80vw; /* Utilise une largeur relative pour s'adapter à la taille de l'écran */
     height: 100vh; /* Utilise une hauteur relative pour éviter une fenêtre trop grande */
     max-width: 800px; /* Limite la largeur max pour ne pas trop grandir */
-    max-height: 400px; /* Limite la hauteur max pour garder un bon aspect */
+    max-height: 500px; /* Limite la hauteur max pour garder un bon aspect */
     background-color: white;
     border-radius: 8px;
     margin: 50px auto;
@@ -127,8 +137,70 @@ iframe {
     border: none;
 }
 
+/* Réactions pour l'adaptation mobile */
 
-p {
-    font-weight: bold;
-    color: #333;
+/* Sur écran moyen (tablettes et petits ordinateurs) */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
+    #rectangle {
+        width: 90vw; /* Resserre légèrement sur les écrans plus petits */
+        height: auto; /* La hauteur devient relative à la largeur */
+        max-height: 600px; /* Limite la hauteur pour les grands écrans */
+    }
+
+    .menu-container {
+        position: absolute;
+        left: 80%; /* Ajuste la position pour une meilleure visibilité */
+    }
+
+    .pages {
+        top: 50px;
+        width: 150px;
+        transform: translateX(0); /* Repositionne pour ne pas couper sur les petits écrans */
+    }
+
+    iframe {
+        margin-top: 3%;
+    }
+}
+
+/* Sur petit écran (téléphones) */
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: top center;
+    }
+
+    #rectangle {
+        width: 100%; /* Prend toute la largeur disponible */
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu-container {
+        position: absolute;
+        left: 70%;
+    }
+
+    .pages {
+        top: 60px;
+        width: 100%;
+        transform: translateX(0);
+        left: 0; /* Aligne la liste des pages à gauche */
+        padding: 10px;
+    }
+
+    .pages a {
+        font-size: 16px; /* Taille de texte augmentée */
+        padding: 8px;
+        text-align: left; /* Aligne les liens à gauche */
+    }
+
+    iframe {
+        margin-top: 5%;
+    }
 }

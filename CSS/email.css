@@ -1,13 +1,15 @@
 body {
     background-image: url(../IMAGES/fd.jpg);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-size: contain;   
-    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-size: cover;   /* L’image couvre toute la fenêtre */
+    background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed; /* Pour qu’elle reste en place même en scrollant */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
+
 
 /* #apple - Taille ajustée */
 #apple {
@@ -33,19 +35,20 @@ nav {
 
 /* Fenêtre principale #rectangle - Taille flexible */
 #rectangle {
-    width: 90%; /* Prend 90% de la largeur de l'écran */
-    max-width: 800px; /* Limité à 800px pour ne pas devenir trop grand */
-    height: 60vh; /* Utilise 60% de la hauteur de l'écran */
+    width: 90%;
+    max-width: 600px;  /* Réduit la taille max pour mobile */
+    height: auto;  /* Permet d’avoir une hauteur qui s’adapte au contenu */
     background-color: white;
-    border-radius: 3%;
-    margin: 50px auto;
-    position: relative;
+    border-radius: 8px;
+    margin: 10px auto; /* Moins d’espace en haut sur mobile */
     padding: 15px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 400px; /* Ajuste la hauteur max */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Évite que la fenêtre soit trop grande */
 }
+
 
 /* Boutons de la fenêtre */
 .buttons {
@@ -223,6 +226,27 @@ nav {
         right: 8px; /* Déplace un peu plus vers la droite */
     }
 }
+
+@media (max-width: 600px) {
+    #rectangle {
+        width: 95%;
+        max-width: 90%;
+        max-height: 70vh; /* Pour éviter qu'il soit trop grand */
+    }
+
+    .pages {
+        width: 90%;
+        max-width: 180px;
+        left: auto;
+        right: 5px;
+        top: 40px;
+    }
+
+    .menu-btn {
+        font-size: 20px; /* Augmente la taille de l'icône */
+    }
+}
+
 
 @media (max-width: 480px) {
     #rectangle {

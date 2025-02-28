@@ -1,14 +1,13 @@
 body {
     background-image: url(../IMAGES/fd.jpg);
-    background-size: cover; /* Meilleur rendu pour s'adapter à tous les écrans */
+    background-size: cover;   /* L’image couvre toute la fenêtre */
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed; /* Pour qu’elle reste en place même en scrollant */
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    height: 100vh; /* S'assure que le fond couvre toute la hauteur de l'écran */
-    overflow: hidden; /* Évite le défilement si l'image de fond dépasse */
 }
 
 #apple {
@@ -26,8 +25,6 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap; /* Permettre aux éléments de s'adapter */
@@ -37,17 +34,19 @@ nav {
 
 #rectangle {
     width: 90%;
-    max-width: 900px;
-    min-height: 350px;
+    max-width: 600px;  /* Réduit la taille max pour mobile */
+    height: auto;  /* Permet d’avoir une hauteur qui s’adapte au contenu */
     background-color: white;
-    border-radius: 3%;
-    margin: 50px auto;
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 10px auto; /* Moins d’espace en haut sur mobile */
+    padding: 15px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Évite que la fenêtre soit trop grande */
 }
+
 
 .buttons {
     display: flex;
@@ -131,28 +130,55 @@ p {
         width: 80%;
         min-height: 300px;
     }
+
     #nom {
         font-size: 40px;
     }
     #info {
         font-size: 18px;
     }
-    .pages a {
-        font-size: 16px;
-    }
 
     #date-heure {
-        font-size: 10px; /* Réduit encore la taille de la police pour les petits écrans */
-        margin-right: 5px; /* Réduit la marge à droite */
-        width: 20%; /* L'élément prend toute la largeur disponible */
-        text-align: center; /* Déplace le texte à gauche */
+        font-size: 12px; /* Réduit la taille de la date/heure */
+        top: 8px; /* Déplace un peu plus vers le haut */
+        right: 8px; /* Déplace un peu plus vers la droite */
     }
 
     .pages {
-        flex-direction: column; /* Passer en colonne si l'écran est petit */
-        align-items: center; /* Centrer les éléments de la navigation */
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .pages a {
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: #007BFF;
+        transition: color 0.3s ease;
     }
 }
+
+@media (max-width: 600px) {
+    #rectangle {
+        width: 95%;
+        max-width: 90%;
+        max-height: 70vh; /* Pour éviter qu'il soit trop grand */
+    }
+
+    .pages {
+        width: 90%;
+        max-width: 180px;
+        left: auto;
+        right: 5px;
+        top: 40px;
+    }
+
+    .menu-btn {
+        font-size: 20px; /* Augmente la taille de l'icône */
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     body {
@@ -160,12 +186,6 @@ p {
         background-position: top center; /* Ajuste encore plus pour les très petits écrans */
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%; /* Assure que le menu occupe toute la largeur */
-    }
     #rectangle {
         width: 100%;
         min-height: 250px;
@@ -179,14 +199,13 @@ p {
     }
 
     .pages {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        top: 50px;
+        width: 150px;
     }
     .pages a {
-        display: block;
-        margin: 10px 0;
-        font-size: 14px;
+        font-size: 12px;  /* Augmentation de la taille des liens */
+        margin-left: 0;
+        padding: 8px;
     }
 
     #date-heure {

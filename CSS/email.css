@@ -204,6 +204,13 @@ nav {
 
 /* Media Queries pour ajustement responsive */
 @media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
     #rectangle {
         width: 95%; /* Prend plus de place sur des écrans plus petits */
         height: auto; /* Ajuste la hauteur pour les petits écrans */
@@ -249,6 +256,13 @@ nav {
 
 
 @media (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
     #rectangle {
         overflow-x: hidden;
     }

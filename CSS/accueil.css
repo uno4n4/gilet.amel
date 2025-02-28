@@ -122,6 +122,7 @@ p {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -175,6 +176,7 @@ p {
 
 @media (max-width: 600px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -217,8 +219,11 @@ p {
 
 @media screen and (max-width: 480px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
-        background-position: top center; /* Ajuste encore plus pour les très petits écrans */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center; /* Ajuste pour les petits écrans */
     }
 
     #rectangle {

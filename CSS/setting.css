@@ -1,14 +1,15 @@
 body {
     background-image: url(../IMAGES/fd.jpg);
-    background-size: contain;   
-    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-size: cover;   /* L’image couvre toute la fenêtre */
+    background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed; /* Pour qu’elle reste en place même en scrollant */
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    height: 100vh;
 }
+
 
 #apple {
     width: 20px;
@@ -33,19 +34,20 @@ nav {
 }
 
 #rectangle {
-    width: 80%;  /* Utilisation d'un pourcentage pour s'adapter à différents écrans */
-    max-width: 600px;  /* Largeur maximale pour ne pas dépasser un certain format */
-    height: 205px;
+    width: 90%;
+    max-width: 600px;  /* Réduit la taille max pour mobile */
+    height: auto;  /* Permet d’avoir une hauteur qui s’adapte au contenu */
     background-color: white;
-    border-radius: 8px;  /* Bords arrondis pour un look plus moderne */
-    margin: 50px auto;
-    padding: 20px;
-    position: relative;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 10px auto; /* Moins d’espace en haut sur mobile */
+    padding: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Évite que la fenêtre soit trop grande */
 }
+
 
 .buttons {
     display: flex;
@@ -119,4 +121,45 @@ nav {
     margin-top: 3px;
 }
 
+/* Sur écran moyen */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
+    #rectangle {
+        width: 80%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #rectangle {
+        width: 95%;
+        max-width: 90%;
+        max-height: 70vh; /* Pour éviter qu'il soit trop grand */
+    }
+}
+
+
+/* Sur petit écran */
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste encore plus pour les très petits écrans */
+    }
+
+    #rectangle {
+        width: 90%;
+        min-height: 100px;
+        margin-left: 3px;
+        padding: 15px;
+    }
+
+    .wallpaper-choice {
+        width: 15%;
+        height: auto;
+    }
+}
 

@@ -1,12 +1,14 @@
 body {
     background-image: url(../IMAGES/fd.jpg);
-    background-size: contain;   
-    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-size: cover; /* Meilleur rendu pour s'adapter à tous les écrans */
+    background-repeat: no-repeat;
     background-position: center;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    height: 100vh; /* S'assure que le fond couvre toute la hauteur de l'écran */
+    overflow: hidden; /* Évite le défilement si l'image de fond dépasse */
 }
 
 #apple {
@@ -14,34 +16,38 @@ body {
 }
 
 #date-heure {
-    margin-left: 90%;
-    height: 10px;
     font-size: 14px;
     font-weight: 600;
+    white-space: nowrap; /* Empêche la coupure du texte */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* En haut à droite */
+    display: inline-block;
 }
-
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap; /* Permettre aux éléments de s'adapter */
+    width: 100%; /* Assure que le menu prend toute la largeur */
+    box-sizing: border-box; /* Prévenir tout dépassement d'éléments */
 }
 
 #rectangle {
-    width: 90%; /* La largeur est dynamique pour s'ajuster à la taille de l'écran */
-    max-width: 900px; /* Pas plus grand que 900px */
-    min-height: 350px; /* Taille minimale pour ne pas être trop petite */
+    width: 90%;
+    max-width: 900px;
+    min-height: 350px;
     background-color: white;
     border-radius: 3%;
     margin: 50px auto;
     position: relative;
     overflow: hidden;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Un peu d'ombre pour le style */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 
 .buttons {
     display: flex;
@@ -56,17 +62,9 @@ nav {
     cursor: pointer;
 }
 
-.rouge {
-    background-color: red;
-}
-
-.orange {
-    background-color: orange;
-}
-
-.vert {
-    background-color: green;
-}
+.rouge { background-color: red; }
+.orange { background-color: orange; }
+.vert { background-color: green; }
 
 #name {
     font-size: 22px;
@@ -76,18 +74,12 @@ nav {
     color: #333;
 }
 
-#name, .rond {
-    margin: 0;
-    padding: 0;
-}
-
 .separator {
     width: auto;
     height: 2px;
     background-color: black;
     margin-top: 3px;
 }
-
 
 p {
     text-align: center;
@@ -126,4 +118,79 @@ p {
 
 .pages a:hover {
     color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
+    #rectangle {
+        width: 80%;
+        min-height: 300px;
+    }
+    #nom {
+        font-size: 40px;
+    }
+    #info {
+        font-size: 18px;
+    }
+    .pages a {
+        font-size: 16px;
+    }
+
+    #date-heure {
+        font-size: 10px; /* Réduit encore la taille de la police pour les petits écrans */
+        margin-right: 5px; /* Réduit la marge à droite */
+        width: 20%; /* L'élément prend toute la largeur disponible */
+        text-align: center; /* Déplace le texte à gauche */
+    }
+
+    .pages {
+        flex-direction: column; /* Passer en colonne si l'écran est petit */
+        align-items: center; /* Centrer les éléments de la navigation */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste encore plus pour les très petits écrans */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Assure que le menu occupe toute la largeur */
+    }
+    #rectangle {
+        width: 100%;
+        min-height: 250px;
+        padding: 15px;
+    }
+    #nom {
+        font-size: 32px;
+    }
+    #info {
+        font-size: 16px;
+    }
+
+    .pages {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .pages a {
+        display: block;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    #date-heure {
+        font-size: 10px; /* Taille encore plus petite pour les petits écrans */
+        right: 8%; /* Un petit décalage vers la gauche */
+    }
 }

@@ -124,6 +124,7 @@ nav {
 /* Sur écran moyen */
 @media screen and (max-width: 768px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -138,6 +139,7 @@ nav {
 
 @media (max-width: 600px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -155,6 +157,7 @@ nav {
 /* Sur petit écran */
 @media screen and (max-width: 480px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;

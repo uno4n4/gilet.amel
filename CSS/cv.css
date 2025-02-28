@@ -152,6 +152,7 @@ iframe {
 /* Sur écran moyen (tablettes et petits ordinateurs) */
 @media screen and (max-width: 768px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -189,6 +190,7 @@ iframe {
 
 @media (max-width: 600px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -218,6 +220,7 @@ iframe {
 /* Sur petit écran (téléphones) */
 @media screen and (max-width: 480px) {
     body {
+        background-image: url(../IMAGES/fd4.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;

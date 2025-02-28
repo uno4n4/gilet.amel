@@ -186,6 +186,14 @@ iframe {
 
 
 @media (max-width: 600px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
+    
     #rectangle {
         width: 95%;
         max-width: 90%;

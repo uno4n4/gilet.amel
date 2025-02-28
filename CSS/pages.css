@@ -14,10 +14,13 @@ body {
 }
 
 #date-heure {
-    margin-left: 90%;
-    height: 10px;
     font-size: 14px;
     font-weight: 600;
+    white-space: nowrap; /* Empêche la coupure du texte */
+    position: absolute;
+    top: 10px;
+    right: 10px; /* En haut à droite */
+    display: inline-block;
 }
 
 nav {
@@ -69,6 +72,7 @@ nav {
 
 iframe {
     width: 100%;
+    max-width: 100%; /* Empêche l'iframe de dépasser 100% de la largeur de son parent */
     height: 90vh;  /* Utilisation de vh pour adapter à l'écran */
     border: none;
     border-radius: 8px;
@@ -162,4 +166,30 @@ iframe {
     background-color: black; /* Noir au lieu de rouge */
     border-radius: 50%; /* Rend le point rond */
     transform: translateX(-50%);
+}
+
+/* Ajout des media queries pour adapter l'iframe sur les petits écrans */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+    iframe {
+        height: 70vh;  /* Réduire la hauteur de l'iframe sur les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: top center; /* Ajuste pour les petits écrans */
+    }
+
+    iframe {
+        height: 60vh;  /* Encore plus petit sur les très petits écrans */
+    }
+    #info {
+        margin-left: 10%;
+        margin-top: 5%;
+    }
 }

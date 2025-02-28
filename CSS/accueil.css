@@ -111,12 +111,12 @@ p {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #007BFF;
+    color: black;
     transition: color 0.3s ease;
 }
 
 .pages a:hover {
-    color: #0056b3;
+    color: black;
 }
 
 /* Responsive Design */

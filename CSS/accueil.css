@@ -164,6 +164,10 @@ p {
         font-size: 14px;
     }
 
+    .dark-mode .pages a {
+        color: white;
+    }
+
     .pages a:hover {
         background: rgba(255, 255, 255, 0.2);
     }
@@ -199,6 +203,10 @@ p {
         text-decoration: none;
         padding: 10px;
         font-size: 14px;
+    }
+
+    .dark-mode .pages a {
+        color: white;
     }
 
     .pages a:hover {
@@ -247,8 +255,19 @@ p {
         background: rgba(255, 255, 255, 0.2);
     }
 
+    .dark-mode .pages a {
+        color: white;
+    }
+
     #date-heure {
         font-size: 10px; /* Taille encore plus petite pour les petits écrans */
         right: 8%; /* Un petit décalage vers la gauche */
     }
+}
+
+.dark-mode #nom {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
 }

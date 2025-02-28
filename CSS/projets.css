@@ -172,6 +172,8 @@ article img {
 @media screen and (max-width: 768px) {
     body {
         background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
         background-position: top center; /* Ajuste pour les petits écrans */
     }
 
@@ -236,7 +238,9 @@ article img {
 @media screen and (max-width: 480px) {
     body {
         background-size: cover;
-        background-position: top center; /* Ajuste encore plus pour les très petits écrans */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center; /* Ajuste pour les petits écrans */
     }
 
     #rectangle {

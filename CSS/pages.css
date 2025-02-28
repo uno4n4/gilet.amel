@@ -175,6 +175,8 @@ iframe {
 @media (max-width: 768px) {
     body {
         background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
         background-position: top center; /* Ajuste pour les petits écrans */
     }
     iframe {
@@ -207,6 +209,8 @@ iframe {
 @media (max-width: 480px) {
     body {
         background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
         background-position: top center; /* Ajuste pour les petits écrans */
     }
 

@@ -107,6 +107,8 @@ nav {
 
 .menu-btn {
     cursor: pointer;
+    margin-top: -40%;
+    display: flex;
 }
 
 .pages {
@@ -179,6 +181,12 @@ nav {
         font-size: 15px;
     }
 
+    .menu-btn {
+        cursor: pointer;
+        margin-top: -20%;
+        display: flex;
+    }
+
     .menu-container {
         display: flex;
         flex-direction: column;
@@ -201,6 +209,10 @@ nav {
     #propos {
         font-size: 15px;
         margin-right: 10%;
+    }
+
+    .dark-mode #propos {
+        color: black;
     }
 }
 
@@ -229,6 +241,12 @@ nav {
 
     .menu-btn {
         font-size: 20px; /* Augmente la taille de l'icône */
+        margin-top: -20%;
+        display: flex;
+    }
+
+    .dark-mode #propos {
+        color: black;
     }
 }
 
@@ -248,6 +266,13 @@ nav {
         min-height: 250px;
         padding: 15px;
     }
+
+    .menu-btn {
+        font-size: 20px; /* Augmente la taille de l'icône */
+        margin-top: -20%;
+        display: flex;
+    }
+
     .menu-container {
         display: flex;
         flex-direction: column;
@@ -265,5 +290,14 @@ nav {
         margin-left: 0;
         padding: 8px;
     }
+
+    .dark-mode #propos {
+        color: black;
+    }
 }
+
+.dark-mode #propos {
+    color: black;
+}
+
 

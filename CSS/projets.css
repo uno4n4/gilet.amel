@@ -101,6 +101,8 @@ nav {
 
 .menu-btn {
     cursor: pointer;
+    margin-top: -40%;
+    display: flex;
 }
 
 .pages {
@@ -185,6 +187,13 @@ article img {
 
     #projets {
         font-size: 15px;
+        padding-right: 20%;
+    }
+
+    .menu-btn {
+        cursor: pointer;
+        margin-top: -20%;
+        display: flex;
     }
 
     .menu-container {
@@ -239,6 +248,8 @@ article img {
 
     .menu-btn {
         font-size: 20px; /* Augmente la taille de l'icône */
+        margin-top: -20%;
+        display: flex;
     }
 }
 
@@ -258,12 +269,19 @@ article img {
         min-height: 250px;
         padding: 15px;
     }
+
     .menu-container {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         position: absolute;
         top: 1px; /* Pour que ce soit un peu plus bas sur petit écran */
+    }
+
+    .menu-btn {
+        cursor: pointer;
+        margin-top: -20%;
+        display: flex;
     }
     
     .pages {
@@ -275,4 +293,8 @@ article img {
         margin-left: 0;
         padding: 8px;
     }
+}
+
+.dark-mode #projets {
+    color: black;
 }

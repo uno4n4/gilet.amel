@@ -82,7 +82,7 @@ nav {
     max-width: 500px;
     background: #f2f2f7;
     border-radius: 12px;
-    padding: 15px;
+    padding: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     margin: 20px auto;
@@ -222,6 +222,7 @@ nav {
     .email-window {
         width: 95%; /* Augmente la largeur pour les petits écrans */
         max-width: 400px;
+        margin-left: -1%;
     }
 
     .send-btn {

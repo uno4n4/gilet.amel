@@ -57,7 +57,6 @@ document.querySelectorAll('.rond').forEach(btn => {
 });
 
 // 🔴 Ferme la fenêtre
-// 🔴 Ferme la fenêtre
 closeBtn.addEventListener('click', () => {
     // Si la fenêtre est en plein écran, on sort du plein écran
     if (document.fullscreenElement) {

@@ -276,3 +276,7 @@ p {
     margin-bottom: 5px;
     color: white;
 }
+
+.dark-mode .pages a {
+    color: white;
+}

@@ -111,6 +111,22 @@ body {
     transform: translateX(-50%);
 }
 
+@media screen and (max-width: 768px) {
+    .foot img {
+        width: 20px; /* Taille d'icône plus petite */
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin-top: 10px;
+        padding: 10px 20px 10px 1px;
+    }
+
+    .foot {
+        display: flexbox;
+        justify-content: space-between;
+        height: 90%;
+    }
+}
+
 .dark-mode {
     background-color: #1c1c1e;
     color: white;
